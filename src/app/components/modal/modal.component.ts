@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ImageComponent } from '../image/image.component';
 import { ImagesService } from '../../services/images.service';
 import { CommentsService } from '../../services/comments.service';
@@ -16,6 +16,7 @@ import { CommentModel } from '../../models/comment.model';
 })
 export class ModalComponent {
 
+  @Output() closed:EventEmitter<any> = new EventEmitter<any>();
   private image:ImageModel;
   private comments:CommentModel[];
 
@@ -28,6 +29,10 @@ export class ModalComponent {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  public hide() {
+    this.closed.emit(null);
   }
 
 }

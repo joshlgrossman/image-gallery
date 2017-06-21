@@ -1,4 +1,6 @@
+<div class="modal-overlay" (click)="hide()"></div>
 <div class="modal-container">
   <image [image]="image"></image>
   <comments [comments]="comments"></comments>
+  <button class="close" (click)="hide()">X</button>
 </div>

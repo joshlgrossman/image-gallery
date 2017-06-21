@@ -5,6 +5,7 @@ import { CommentModel } from '../../models/comment.model';
 @Component({
   selector: 'comments',
   template: require('./comments.template.html'),
+  styleUrls: ['./comments.component.scss'],
   providers: [CommentsService]
 })
 export class CommentsComponent {

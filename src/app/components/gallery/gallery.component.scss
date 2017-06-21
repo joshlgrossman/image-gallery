@@ -10,6 +10,10 @@
       /deep/ .title, /deep/ .caption {
         display: none;
       }
+
+      /deep/ img {
+        max-height: 200px;
+      }
     }
 
   }

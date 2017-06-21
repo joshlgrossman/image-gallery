@@ -13,7 +13,7 @@ import { ModalComponent } from '../modal/modal.component';
   providers: [
     ImagesService,
     CommentsService
-  ]
+  ],
 })
 export class GalleryComponent implements AfterViewInit {
 
@@ -41,9 +41,13 @@ export class GalleryComponent implements AfterViewInit {
     }
   }
 
-  show(imageId:string) {
+  showModal(imageId:string) {
     this.modal.show(imageId);
     this.modalVisible = true;
+  }
+
+  hideModal() {
+    this.modalVisible = false;
   }
 
 }
