@@ -1,4 +1,6 @@
 <image 
-  *ngFor="let imageId of images.keys()"
-  [image]="images.get(imageId)"
+  *ngFor="let imageModel of imageModels"
+  [image]="imageModel"
+  (click)="show(imageModel.id)"
 ></image>
+<modal></modal>

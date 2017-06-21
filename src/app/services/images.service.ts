@@ -18,13 +18,17 @@ export class ImagesService {
       this.images = new Map<string, ImageModel>();
       
       for(const id in imagesJSON) {
-        this.images.set(id, new ImageModel(imagesJSON[id]));
+        this.images.set(id, new ImageModel({id, ...imagesJSON[id]}));
       }
 
       resolve(this.images);
 
     });
 
+  }
+
+  public async getImage(imageId:string) : Promise<ImageModel> {
+    return (await this.getImages()).get(imageId);
   }
 
 }

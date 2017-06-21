@@ -8,6 +8,7 @@ import { ImageComponent } from './components/image/image.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { enableProdMode } from '@angular/core';
 
 @NgModule({
   imports: [BrowserModule],
@@ -21,3 +22,5 @@ import { ModalComponent } from './components/modal/modal.component';
   ]
 })
 export class AppModule {}
+
+// enableProdMode();
