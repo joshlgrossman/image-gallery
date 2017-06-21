@@ -3,5 +3,10 @@
     "title": "Google",
     "caption": "This is Google's logo",
     "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+  },
+  {
+    "title": "Some Flower",
+    "caption": "A picture of some flower from Google",
+    "url": "https://s-media-cache-ak0.pinimg.com/736x/02/f4/5f/02f45f665fe3493e9c910145365cf014.jpg"
   }
 ]
