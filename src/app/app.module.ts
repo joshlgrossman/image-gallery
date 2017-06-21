@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ImageComponent } from './components/image/image.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   imports: [BrowserModule],
@@ -15,7 +16,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     AppComponent,
     GalleryComponent,
     ImageComponent,
-    CommentsComponent
+    CommentsComponent,
+    ModalComponent
   ]
 })
 export class AppModule {}

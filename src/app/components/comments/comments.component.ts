@@ -11,5 +11,4 @@ export class CommentsComponent {
 
   @Input() comments:CommentModel[];
 
-
 }

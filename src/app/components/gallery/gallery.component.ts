@@ -4,6 +4,7 @@ import { ImagesService } from '../../services/images.service';
 import { CommentsService } from '../../services/comments.service';
 import { ImageModel } from '../../models/image.model';
 import { CommentModel } from '../../models/comment.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'gallery',
@@ -15,31 +16,15 @@ import { CommentModel } from '../../models/comment.model';
 })
 export class GalleryComponent {
 
-  private image:ImageModel;
-  private comments:CommentModel[];
   private images:Map<string, ImageModel>;
-  private imageIds:string[];
-  private currentIndex:number;
 
   public constructor(private imagesService:ImagesService, private commentsService:CommentsService) {
-    this.currentIndex = 0;
-    this.loadImages().then(this.loadComments.bind(this));
+    this.loadImages();
   }
 
   public async loadImages(){
     try {
-      this.images = await this.imagesService.getImages();  
-      this.imageIds = [...this.images.keys()];
-      this.image = this.images.get(this.imageIds[this.currentIndex]);
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
-  public async loadComments(){
-    try {
-      this.comments = await this.commentsService.getComments(this.imageIds[this.currentIndex]);
-      console.log(this.comments, this.imageIds[this.currentIndex]);
+      this.images = await this.imagesService.getImages();
     } catch (e) {
       console.log(e);
     }

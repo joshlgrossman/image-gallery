@@ -1,2 +1,4 @@
-<image [image]="image"></image>
-<comments [comments]="comments"></comments>
+<image 
+  *ngFor="let imageId of images.keys()"
+  [image]="images.get(imageId)"
+></image>
