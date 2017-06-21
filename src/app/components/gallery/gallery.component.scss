@@ -1,0 +1,17 @@
+:host {
+
+  .gallery-container {
+    display: flex;
+    align-items: center;
+
+    image {
+      padding: 20px;
+
+      /deep/ .title, /deep/ .caption {
+        display: none;
+      }
+    }
+
+  }
+
+}

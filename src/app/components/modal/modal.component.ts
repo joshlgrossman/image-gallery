@@ -8,6 +8,7 @@ import { CommentModel } from '../../models/comment.model';
 @Component({
   selector: 'modal',
   template: require('./modal.template.html'),
+  styleUrls: ['./modal.component.scss'],
   providers: [
     ImagesService,
     CommentsService
@@ -21,7 +22,6 @@ export class ModalComponent {
   public constructor(private imagesService:ImagesService, private commentsService:CommentsService) {}
 
   public async show(imageId:string) {
-    console.log(imageId);
     try {
       this.image = await this.imagesService.getImage(imageId); 
       this.comments = await this.commentsService.getComments(imageId);

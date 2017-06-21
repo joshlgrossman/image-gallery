@@ -9,6 +9,7 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'gallery',
   template: require('./gallery.template.html'),
+  styleUrls: ['./gallery.component.scss'],
   providers: [
     ImagesService,
     CommentsService
