@@ -6,7 +6,8 @@ module.exports = {
   
   entry: {
     'app': './src/main.ts',
-    'polyfills': './src/polyfills.ts'
+    'polyfills': './src/polyfills.ts',
+    'vendor': './src/vendor.ts'
   },
 
   output: {
