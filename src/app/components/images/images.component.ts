@@ -1,26 +1,26 @@
-import { Component } from '@angular/core';
-import { ImagesService } from '../../services/images.service';
-import { ImageModel } from '../../models/image.model';
+// import { Component } from '@angular/core';
+// import { ImagesService } from '../../services/images.service';
+// import { ImageModel } from '../../models/image.model';
 
-@Component({
-  selector: 'images',
-  template: require('./images.template.html'),
-  providers: [ImagesService]
-})
-export class ImagesComponent {
+// @Component({
+//   selector: 'image',
+//   template: require('./images.template.html'),
+//   providers: [ImagesService]
+// })
+// export class ImageComponent {
 
-  private images:ImageModel[];
+//   private images:ImageModel[];
 
-  constructor(imagesService:ImagesService) {
-    this.loadImages(imagesService);
-  }
+//   public constructor(private imagesService:ImagesService) {
+//     this.loadImages();
+//   }
 
-  async loadImages(imagesService:ImagesService){
-    try {
-      this.images = await imagesService.getImages();
-    } catch (e) {
-      console.log(e);
-    }
-  }
+//   public async loadImages() {
+//     // try {
+//     //   this.images = await this.imagesService.getImages();
+//     // } catch (e) {
+//     //   console.log(e);
+//     // }
+//   }
 
-}
+// }

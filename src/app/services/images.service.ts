@@ -4,25 +4,24 @@ import { ImageModel } from '../models/image.model';
 @Injectable()
 export class ImagesService {
 
-  public images:ImageModel[];
+  private images:Map<string, ImageModel>;
 
-  constructor(){
-    this.images = [];
-  }
-
-  public getImages() : Promise<ImageModel[]> {
+  public getImages() : Promise<Map<string, ImageModel>> {
 
     // Fake webservice cache
-    if(this.images.length) return Promise.resolve(this.images);
+    if(this.images) return Promise.resolve(this.images);
     // Fake webservice request
     return new Promise((resolve, reject) => {
-      const imagesJSON:any[] = require('./images.json');
 
-      for(const imageJSON of imagesJSON) {
-        this.images.push(new ImageModel(imageJSON));
+      const imagesJSON:any = require('./images.json');
+      this.images = new Map<string, ImageModel>();
+      
+      for(const id in imagesJSON) {
+        this.images.set(id, new ImageModel(imagesJSON[id]));
       }
 
       resolve(this.images);
+
     });
 
   }
