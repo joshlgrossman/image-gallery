@@ -1,8 +1,9 @@
 <div class="gallery-container">
+  <div class="image-box" *ngFor="let imageModel of imageModels">
   <image 
-    *ngFor="let imageModel of imageModels"
     [image]="imageModel"
     (click)="showModal(imageModel.id)"
   ></image>
+  </div>
 </div>
 <modal [ngClass]="{'show': modalVisible}" (closed)="hideModal()"></modal>

@@ -3,7 +3,7 @@
     {
       "user": "John Doe",
       "date": "Tue Jun 20 2017 21:36:28 GMT-0500 (Central Daylight Time)",
-      "content": "Hi there"
+      "content": "Really bad quality"
     }
   ],
   "flwr001": [
@@ -18,19 +18,14 @@
       "content": "Yeah I agree, it's neat"
     },
     {
-      "user": "Mr. Longcomment",
+      "user": "Mr. Smith",
       "date": "Wed Jun 21 2017 06:00:05 GMT-0500 (Central Daylight Time)",
-      "content": "This is a longer comment, I'm checking to see how badly this breaks the styles.  Hopefully it doesn't break much but who knows! I guess we're about to find out."
+      "content": "That's a dandelion"
     },
     {
       "user": "Alice",
       "date": "Wed Jun 21 2017 18:50:08 GMT-0500 (Central Daylight Time)",
-      "content": "Looks like it pretty much worked"
-    },
-    {
-      "user": "Bob",
-      "date": "Wed Jun 21 2017 19:53:08 GMT-0500 (Central Daylight Time)",
-      "content": "Good!"
+      "content": "Still neat though"
     }
   ]
 }

@@ -1,7 +1,9 @@
 <div class="modal-overlay" (click)="hide()"></div>
 <div class="modal-container">
-  <button class="close" (click)="hide()">X</button>
-  <image [image]="image"></image>
+  <div class="image-section">
+    <image [image]="image"></image>
+    <button class="close" (click)="hide()">X</button>
+  </div>
   <div class="comment-section">
     <comments [comments]="comments"></comments>
     <comment-form (submitted)="postComment($event)"></comment-form>

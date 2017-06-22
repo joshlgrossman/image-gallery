@@ -3,6 +3,20 @@
   .gallery-container {
     display: flex;
     align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+
+    .image-box {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: white;
+      margin: 10px;
+    }
 
     image {
       padding: 20px;

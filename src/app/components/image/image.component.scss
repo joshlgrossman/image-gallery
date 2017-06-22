@@ -1,10 +1,16 @@
 :host {
+  font-size: 0;
 
   .title {
-    font-family: sans-serif;
-    font-size: 1.4em;
+    font-family: 'Roboto';
+    font-size: 2rem;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    background-color: rgba(255,255,255,0.4);
+    border-bottom: 1px solid #999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .caption {
@@ -13,9 +19,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    font-family: sans-serif;
+    background-color: rgba(255,255,255,0.4);
+    border-top: 1px solid #999;
+    font-family: 'Roboto';
+    font-size: 1rem;
     text-align: center;
   }
 

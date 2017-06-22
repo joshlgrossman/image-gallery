@@ -5,7 +5,9 @@
       class="comment-user-input" 
       placeholder="Username"
       [(ngModel)]="comment.user"
+      #user="ngModel"
       required
+      minlength="1"
     />
   </div>
   <textarea
@@ -13,7 +15,9 @@
     class="comment-content-input"
     placeholder="Leave a comment..."
     [(ngModel)]="comment.content"
+    #content="ngModel"
     required
+    minlength="1"
   ></textarea>
   <div class="comment-submit-field">
     <input type="submit" class="comment-submit-button"/>
