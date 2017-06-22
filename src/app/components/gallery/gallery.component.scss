@@ -16,6 +16,13 @@
       overflow: hidden;
       background-color: white;
       margin: 10px;
+      cursor: pointer;
+      box-shadow: none;
+      transition: box-shadow 250ms;
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      }
     }
 
     image {
@@ -27,7 +34,6 @@
 
       /deep/ img {
         max-height: 200px;
-        cursor: pointer;
       }
     }
 

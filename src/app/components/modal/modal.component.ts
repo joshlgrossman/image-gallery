@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { ImageComponent } from '../image/image.component';
 import { ImagesService } from '../../services/images.service';
 import { CommentsService } from '../../services/comments.service';
 import { ImageModel } from '../../models/image.model';
 import { CommentModel } from '../../models/comment.model';
+import { CommentFormComponent } from '../comment-form/comment-form.component';
 
 @Component({
   selector: 'modal',
@@ -17,6 +18,8 @@ import { CommentModel } from '../../models/comment.model';
 export class ModalComponent {
 
   @Output() closed:EventEmitter<any> = new EventEmitter<any>();
+  @ViewChild(CommentFormComponent) form:CommentFormComponent;
+
   private image:ImageModel;
   private comments:CommentModel[];
   private imageId:string;
@@ -34,6 +37,7 @@ export class ModalComponent {
   }
 
   public hide() {
+    this.form.reset();
     this.closed.emit(null);
   }
 

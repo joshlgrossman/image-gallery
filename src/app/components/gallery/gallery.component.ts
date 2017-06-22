@@ -6,6 +6,11 @@ import { ImageModel } from '../../models/image.model';
 import { CommentModel } from '../../models/comment.model';
 import { ModalComponent } from '../modal/modal.component';
 
+/**
+ * @class GalleryComponent
+ * Component for rendering a listing of images and handling
+ * the creation of a modal to display a larger image
+ */
 @Component({
   selector: 'gallery',
   template: require('./gallery.template.html'),
@@ -17,8 +22,7 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class GalleryComponent implements AfterViewInit {
 
-  @ViewChild(ModalComponent)
-  private modal:ModalComponent;
+  @ViewChild(ModalComponent) modal:ModalComponent;
   private modalVisible:boolean;
 
   private images:Map<string, ImageModel>;
@@ -35,7 +39,7 @@ export class GalleryComponent implements AfterViewInit {
   public async loadImages(){
     try {
       this.images = await this.imagesService.getImages();
-      this.imageModels = [...this.images.values()];
+      this.imageModels = [...this.images.values()]; // TypeScript is not sure if this is an array, so create an array
     } catch (e) {
       console.log(e);
     }

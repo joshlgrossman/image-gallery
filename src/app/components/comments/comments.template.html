@@ -1,3 +1,6 @@
+<div class="comment" *ngIf="comments.length == 0">
+  No comments yet...
+</div>
 <div class="comment" *ngFor="let comment of comments">
   <div class="comment-details">
     <div class="comment-user">{{comment.user}}</div>

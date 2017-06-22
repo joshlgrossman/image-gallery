@@ -1,9 +1,9 @@
 {
   "g00g13": [
     {
-      "user": "John Doe",
+      "user": "John",
       "date": "Tue Jun 20 2017 21:36:28 GMT-0500 (Central Daylight Time)",
-      "content": "Really bad quality"
+      "content": "Not a very good quality image"
     }
   ],
   "flwr001": [
@@ -26,6 +26,13 @@
       "user": "Alice",
       "date": "Wed Jun 21 2017 18:50:08 GMT-0500 (Central Daylight Time)",
       "content": "Still neat though"
+    }
+  ],
+  "sandiego": [
+    {
+      "user": "Louis",
+      "date": "Wed Jun 21 2017 19:54:10 GMT-0500 (Central Daylight Time)",
+      "content": "Another poor-quality image"
     }
   ]
 }

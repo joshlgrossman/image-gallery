@@ -20,6 +20,10 @@
     minlength="1"
   ></textarea>
   <div class="comment-submit-field">
-    <input type="submit" class="comment-submit-button"/>
+    <input 
+      type="submit" 
+      class="comment-submit-button"
+      [disabled]="!comment.user || !comment.content"
+    />
   </div>
 </form>

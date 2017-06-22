@@ -1,11 +1,5 @@
 [
   {
-    "id": "g00g13",
-    "title": "Google",
-    "caption": "This is Google's logo",
-    "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
-  },
-  {
     "id": "flwr001",
     "title": "Some Flower",
     "caption": "A picture of some flower from Google",
@@ -22,5 +16,17 @@
     "title": "A Neat Car",
     "caption": "This is a neat car",
     "url": "https://static01.nyt.com/images/2013/01/08/business/08Bucks-infiniti/08Bucks-infiniti-blog480.jpg"
+  },
+  {
+    "id": "g00g13",
+    "title": "Google",
+    "caption": "This is Google's logo",
+    "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+  },
+  {
+    "id": "sandiego",
+    "title": "San Diego",
+    "caption": "This is one of my favorite cities",
+    "url": "https://media-cdn.tripadvisor.com/media/photo-s/05/a4/ee/8f/san-diego.jpg"
   }
 ]
