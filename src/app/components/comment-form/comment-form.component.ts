@@ -12,8 +12,10 @@ export class CommentFormComponent {
   private comment:CommentModel = new CommentModel();
 
   submit(){
-    this.submitted.emit(this.comment.clone());
-    this.comment = new CommentModel();
+    if(this.comment.user && this.comment.content){
+      this.submitted.emit(this.comment.clone());
+      this.comment = new CommentModel();
+    }
   }
 
 }
