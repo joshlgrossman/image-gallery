@@ -8,7 +8,7 @@ import { ModalComponent } from '../modal/modal.component';
 
 /**
  * @class GalleryComponent
- * Component for rendering a listing of images and handling
+ * Component for rendering a listing of image thumbnails and handling
  * the creation of a modal to display a larger image
  */
 @Component({
@@ -36,6 +36,7 @@ export class GalleryComponent implements AfterViewInit {
 
   ngAfterViewInit(){}
 
+  /** loads image map and models */
   public async loadImages(){
     try {
       this.images = await this.imagesService.getImages();

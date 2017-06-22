@@ -1,3 +1,7 @@
+/**
+ * @class ImageModel
+ * Model for representing Images
+ */
 export class ImageModel {
 
   public readonly id:string;

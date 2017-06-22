@@ -1,3 +1,7 @@
+/**
+ * @class CommentModel
+ * Model for representing a comment within an image's comment thread
+ */
 export class CommentModel {
 
   public readonly user:string;
@@ -16,6 +20,7 @@ export class CommentModel {
     }
   }
 
+  /** creates a shallow copy of this comment */
   public clone() : CommentModel {
     return new CommentModel(this);
   }

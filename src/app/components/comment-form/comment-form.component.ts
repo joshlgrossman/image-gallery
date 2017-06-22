@@ -18,7 +18,7 @@ export class CommentFormComponent {
   @Output() submitted:EventEmitter<CommentModel> = new EventEmitter<CommentModel>();
   // model representing form's data
   private comment:CommentModel = new CommentModel();
-  
+
   public reset(){
     this.comment = new CommentModel();
   }
