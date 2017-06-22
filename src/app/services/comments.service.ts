@@ -17,17 +17,8 @@ export class CommentsService {
     // Fake webservice request
     return new Promise<CommentModel[]>((resolve, reject) => {
 
-      const commentsJSON:any = require('./comments.json');
-      this.comments = new Map<string, CommentModel[]>();
-      for(const id in commentsJSON){
-        this.comments.set(
-          id, 
-          commentsJSON[id].map(commentJSON => new CommentModel(commentJSON))
-        );
-      }
-
-      if(!this.comments.get(imageId)) this.comments.set(imageId, []);
-
+      const commentsJSON:any = require('./comments.json')[imageId] || [];      
+      this.comments.set(imageId, commentsJSON.map(commentJSON => new CommentModel(commentJSON)));
       resolve(this.comments.get(imageId));
 
     });

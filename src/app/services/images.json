@@ -1,19 +1,26 @@
-{
-  "g00g13": {
+[
+  {
+    "id": "g00g13",
     "title": "Google",
     "caption": "This is Google's logo",
     "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
   },
-
-  "flwr001": {
+  {
+    "id": "flwr001",
     "title": "Some Flower",
     "caption": "A picture of some flower from Google",
     "url": "https://s-media-cache-ak0.pinimg.com/736x/02/f4/5f/02f45f665fe3493e9c910145365cf014.jpg"
   },
-
-  "puppy": {
+  {
+    "id": "puppy",
     "title": "Bug-eyed Puppy",
     "caption": "And here's a bug-eyed puppy",
     "url": "http://cdn3-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-5.jpg"
+  },
+  {
+    "id": "car001",
+    "title": "A Neat Car",
+    "caption": "This is a neat car",
+    "url": "https://static01.nyt.com/images/2013/01/08/business/08Bucks-infiniti/08Bucks-infiniti-blog480.jpg"
   }
-}
+]

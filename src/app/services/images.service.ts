@@ -17,8 +17,8 @@ export class ImagesService {
       const imagesJSON:any = require('./images.json');
       this.images = new Map<string, ImageModel>();
       
-      for(const id in imagesJSON) {
-        this.images.set(id, new ImageModel({id, ...imagesJSON[id]}));
+      for(const imageJSON of imagesJSON) {
+        this.images.set(imageJSON.id, new ImageModel(imageJSON));
       }
 
       resolve(this.images);
