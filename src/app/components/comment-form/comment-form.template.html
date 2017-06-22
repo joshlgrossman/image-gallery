@@ -1,0 +1,21 @@
+<form #commentForm="ngForm" (ngSubmit)="submit(commentForm)">
+  <div class="comment-user-field">
+    <input
+      name="user" 
+      class="comment-user-input" 
+      placeholder="Username"
+      [(ngModel)]="comment.user"
+      required
+    />
+  </div>
+  <textarea
+    name="content"
+    class="comment-content-input"
+    placeholder="Leave a comment..."
+    [(ngModel)]="comment.content"
+    required
+  ></textarea>
+  <div class="comment-submit-field">
+    <input type="submit" class="comment-submit-button"/>
+  </div>
+</form>

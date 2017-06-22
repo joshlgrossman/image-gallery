@@ -19,11 +19,13 @@ export class ModalComponent {
   @Output() closed:EventEmitter<any> = new EventEmitter<any>();
   private image:ImageModel;
   private comments:CommentModel[];
+  private imageId:string;
 
   public constructor(private imagesService:ImagesService, private commentsService:CommentsService) {}
 
   public async show(imageId:string) {
     try {
+      this.imageId = imageId;
       this.image = await this.imagesService.getImage(imageId); 
       this.comments = await this.commentsService.getComments(imageId);
     } catch (e) {
@@ -33,6 +35,10 @@ export class ModalComponent {
 
   public hide() {
     this.closed.emit(null);
+  }
+
+  public async postComment(comment:CommentModel){
+    this.commentsService.postComment(this.imageId, comment);
   }
 
 }

@@ -13,7 +13,7 @@ export class CommentsService {
   public async getComments(imageId:string) : Promise<CommentModel[]> {
 
     // Fake webservice cache
-    if(this.comments[imageId]) return Promise.resolve(this.comments[imageId]);
+    if(this.comments.get(imageId)) return Promise.resolve(this.comments.get(imageId));
     // Fake webservice request
     return new Promise<CommentModel[]>((resolve, reject) => {
 
@@ -25,8 +25,10 @@ export class CommentsService {
           commentsJSON[id].map(commentJSON => new CommentModel(commentJSON))
         );
       }
-      
-      resolve(this.comments.get(imageId) || []);
+
+      if(!this.comments.get(imageId)) this.comments.set(imageId, []);
+
+      resolve(this.comments.get(imageId));
 
     });
 
@@ -34,11 +36,11 @@ export class CommentsService {
 
   public async postComment(imageId:string, comment:CommentModel) : Promise<CommentModel> {
 
-    if(!this.comments[imageId]) this.comments[imageId] = await this.getComments(imageId);
+    if(!this.comments.get(imageId)) this.comments.set(imageId, await this.getComments(imageId));
     
     return new Promise<CommentModel>((resolve, reject) => {
 
-      this.comments[imageId].push(comment);
+      this.comments.get(imageId).push(comment);
       resolve(comment);
 
     });

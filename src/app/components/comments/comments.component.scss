@@ -1,17 +1,14 @@
 :host {
 
-
   .comment {
     border-bottom: 1px solid #aaa;
     box-shadow: 0 3px 5px rgba(0,0,0,0.3);
     font-family: sans-serif;
     position: relative;
     padding: 10px;
-
-    + .comment {
-      margin-top: 4px;
-    }
-
+    max-width: 500px;
+    margin-bottom: 10px;
+    
     .comment-details {
       display: flex;
       align-items: center;
